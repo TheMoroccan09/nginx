@@ -1,9 +1,11 @@
 FROM nginx:latest
-MAINTAINER themorocan09 <themoroccan09@github>
+MAINTAINER "Mohimi Othmane" <mohimi.othmane@gmail.com>
 
 RUN apt-get update &&\
     apt-get install -y \
         nano \
         git \
-        vim \
-        iputils-ping \
+	vim \
+	iputils-ping 
+
+COPY nginx.conf /etc/nginx/nginx.conf
