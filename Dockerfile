@@ -6,6 +6,4 @@ RUN apt-get update &&\
         nano \
         git \
 	vim \
-	iputils-ping 
-
-COPY nginx.conf /etc/nginx/nginx.conf
+	iputils-ping
