@@ -1,7 +1,7 @@
 FROM nginx:1.27.3
 # Add metadata using labels
 LABEL maintainer="TheMoroccan09"
-LABEL version="1.1"
+LABEL version="1.2"
 LABEL description="Nginx"
 
 RUN apt-get update \
