@@ -1,7 +1,7 @@
 FROM nginx:1.27.3
 # Add metadata using labels
 LABEL maintainer="TheMoroccan09"
-LABEL version="1.1"
+LABEL version="1.2"
 LABEL description="Nginx"
 
 RUN apt-get update \
@@ -12,5 +12,8 @@ RUN apt-get update \
     certbot \
     ssl-cert-check \
     && apt-get clean
-    
+
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY renew-certbot.sh /opt/renew-certbot.sh
+
+RUN chmod u+x /opt/renew-certbot.sh
