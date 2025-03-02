@@ -12,5 +12,5 @@ RUN apt-get update \
     certbot \
     ssl-cert-check \
     && apt-get clean
-
+    
 COPY nginx.conf /etc/nginx/nginx.conf
